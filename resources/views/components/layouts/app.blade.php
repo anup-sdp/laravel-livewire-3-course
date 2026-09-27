@@ -1,3 +1,4 @@
+<!-- file: resources/views/components/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -24,6 +25,7 @@
         </div>
       </nav>
       <main>
+        <!-- livewire renders component here -->
         {{ $slot }}
       </main>
     </body>
