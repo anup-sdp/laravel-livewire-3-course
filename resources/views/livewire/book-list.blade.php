@@ -5,7 +5,7 @@
       <p>Here's a list of your book reviews...</p>
     </div>
   </header>
-
+  <!-- blade comment -->
   {{-- <div>
     <p>Count: {{ $count }}</p>
     <button wire:click="increment(1)">+1</button>
@@ -26,3 +26,7 @@
     @endforeach
   </ul>
 </div>
+<!-- 
+  the delete button is at right side of the book title in ui,
+  because in app.css, in .list button{@apply float-end;} == float: inline-end
+-->
