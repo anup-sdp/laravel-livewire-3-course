@@ -8,6 +8,12 @@
     placeholder="Search for books..."
     class="search"
   >
+  <!-- 
+      What the 'term' binding (with BookList.php) does:
+    wire:model="term" keeps the input value in sync with $this->term.
+    .live sends updates to the server as the user types (not only on submit).
+    .debounce.300ms waits 300ms after typing stops before sending, so you are not querying on every keystroke.
+  -->
 
   <ul class="list">
     @foreach($books as $book)
