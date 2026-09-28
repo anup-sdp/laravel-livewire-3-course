@@ -1,6 +1,6 @@
 <div>
+  <!-- page header is a livewire component, it is in the livewire folder -->
   <livewire:page-header>
-
   <ul class="list">
     @foreach($books as $book)
       <li wire:key="{{ $book->id }}">
