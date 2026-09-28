@@ -62,7 +62,7 @@ composer show livewire/livewire
 
 ---
 git add .
-git commit -m "v0.1.2"
+git commit -m "v0.1.3"
 git checkout lesson-2
 ---
 
