@@ -1,0 +1,208 @@
+livewire-3 course notes:
+built by anup, sept 27-28, 2026
+
+by following:
+Livewire 3 Crash Course playlist, by Net Ninja: 
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9htKcjQPGQQL3fQHbIxXowN
+
+fork the repo from Net Ninja(with all branches), https://github.com/iamshaunjp/livewire-3-crash-course
+
+git clone https://github.com/anup30/livewire-3-crash-course.git
+
+cd livewire-3-crash-course
+code .
+
+bash:
+git branch -r | grep -v '\->' | sed 's/origin\///' | xargs -n 1 git checkout
+
+git branch -a   --(see local branches)
+git branch -r   --(see remote branches)
+
+~~~~~~~~~~~~~~~~~~~~
+after switch/checkout to each branches, run:
+php artisan migrate
+npm run build 
+php artisan serve 
+~~~~~~~~~~~~~~~~~~~~
+
+=====================================================================================
+lesson-1, Introduction & Setup
+=====================================================================================
+git checkout lesson-1
+
+git remote -v
+
+-----------
+npm install
+npm install-scripts approve esbuild
+npm run dev  /
+npm run build
+---------------
+composer install
+Copy-Item .env.example .env
+php artisan key:generate
+---
+New-Item -ItemType File .\database\database.sqlite
+php artisan migrate
+php artisan migrate --seed  --(with dummy books table)
+php artisan migrate:fresh --seed
+---
+php artisan serve   <-----
+
+
+-----------------
+livewire install:
+// https://livewire.laravel.com/docs/3.x/quickstart (use older version as author)
+composer require livewire/livewire
+composer require livewire/livewire:3.*    <--- use
+composer require livewire/livewire:4.*
+
+composer show livewire/livewire
+
+
+---
+git add .
+git commit -m "v0.1"
+git checkout lesson-2
+---
+
+=====================================================================================
+lesson-2, Livewire Components
+=====================================================================================
+php artisan make:livewire book-list  <----- (make component)
+it created files:
+class: app/Livewire/BookList.php
+view: resources/views/livewire/book-list.blade.php
+add code in those files.
+use component in welcome page <livewire:book-list>
+php artisan list livewire
+
+---
+git add .
+git commit -m "v0.2"
+git checkout lesson-3
+---
+
+=====================================================================================
+lesson-3, Actions
+=====================================================================================
+
+---
+git add .
+git commit -m "v0.3"
+git checkout lesson-4
+---
+
+=====================================================================================
+lesson-4, Data Binding (2 way binding) & Modifiers
+=====================================================================================
+
+---
+git add .
+git commit -m "v0.4"
+git checkout lesson-5
+---
+
+=====================================================================================
+lesson-5, Page Components
+=====================================================================================
+
+to use book-list.blade.php as whole page,
+php artisan livewire:layout   
+--(file created: resources/views/components/layouts/app.blade.php, book-list is inserted in the {{$slot}} )
+set it in routes/web.php
+(fixing page title shown)
+---
+git add .
+git commit -m "v0.5"
+git checkout lesson-6
+---
+
+=====================================================================================
+lesson-6, More on Pages & Layout
+=====================================================================================
+
+make demo create page:
+php artisan make:livewire create-book
+it created files: CreateBook.php and create-book.blade.php 
+write codes there
+---
+git add .
+git commit -m "v0.6.1"
+git checkout lesson-7
+---
+
+=====================================================================================
+lesson-7, Nesting Components
+=====================================================================================
+
+php artisan make:livewire page-header
+
+---
+git add .
+git commit -m "v0.7.1"
+git checkout lesson-8
+---
+
+=====================================================================================
+lesson-8, Props & Mount Hook
+=====================================================================================
+
+---
+git add .
+git commit -m "v0.8"
+git checkout lesson-9
+---
+
+
+=====================================================================================
+lesson-9, Making a Web Form, (write create book code)
+=====================================================================================
+
+---
+git add .
+git commit -m "v0.9"
+git checkout lesson-10
+---
+
+
+=====================================================================================
+lesson-10, Validation Rules
+=====================================================================================
+
+---
+git add .
+git commit -m "v0.10"
+git checkout lesson-11
+---
+
+=====================================================================================
+lesson-11, Faster Navigation
+=====================================================================================
+
+
+use wire:navigate in app.blade.php in the links
+
+---
+git add .
+git commit -m "v0.11"
+git checkout lesson-12
+---
+
+=====================================================================================
+lesson-12, Adding a Live Search
+=====================================================================================
+
+php artisan migrate
+npm run build 
+php artisan serve
+
+---
+git add .
+git commit -m "v0.12"
+git checkout lesson-1
+---
+git push --all origin   --(push all local branches at once)         <-----
+git push -u origin lesson-12   --(push only current active branch)
+---
+
