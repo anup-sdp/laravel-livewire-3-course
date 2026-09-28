@@ -37,6 +37,6 @@ class CreateBook extends Component {
     }
 
     public function render(){
-        return view('livewire.create-book');
+        return view('livewire.create-book')->title('Add a Book');
     }
 }
