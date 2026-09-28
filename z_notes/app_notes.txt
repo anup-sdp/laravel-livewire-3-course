@@ -5,18 +5,21 @@ by following:
 Livewire 3 Crash Course playlist, by Net Ninja: 
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9htKcjQPGQQL3fQHbIxXowN
 
-fork the repo from Net Ninja(with all branches), https://github.com/iamshaunjp/livewire-3-crash-course
+fork the repo from Net Ninja(with all branches):
 
-git clone https://github.com/anup30/livewire-3-crash-course.git
-
+git clone https://github.com/iamshaunjp/livewire-3-crash-course
 cd livewire-3-crash-course
 code .
 
-bash:
+using bash:
 git branch -r | grep -v '\->' | sed 's/origin\///' | xargs -n 1 git checkout
 
-git branch -a   --(see local branches)
-git branch -r   --(see remote branches)
+see local branches:  git branch -a
+see remote branches: git branch -r
+
+git remote set-url origin https://github.com/anup-sdp/laravel-livewire-3-course.git
+git remote -v
+git push --all origin
 
 ~~~~~~~~~~~~~~~~~~~~
 after switch/checkout to each branches, run:
@@ -62,7 +65,7 @@ composer show livewire/livewire
 
 ---
 git add .
-git commit -m "v0.1.5"
+git commit -m "v0.1.6"
 git checkout lesson-2
 ---
 
