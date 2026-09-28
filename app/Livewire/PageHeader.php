@@ -4,18 +4,16 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class PageHeader extends Component
-{
+class PageHeader extends Component {
     public $name = 'Mario';
-    public $subtitle;
+    public $subtitle; // sent as prop, from component user
 
-    public function mount($subtitle)
-    {
+    // mount hook
+    public function mount($subtitle){
         $this->subtitle = $subtitle;
     }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.page-header');
     }
 }

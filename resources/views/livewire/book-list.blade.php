@@ -1,4 +1,5 @@
 <div>
+    <!-- sending props to component -->
   <livewire:page-header subtitle="Here's a list of your books...">
 
   <ul class="list">
