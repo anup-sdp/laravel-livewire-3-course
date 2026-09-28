@@ -202,7 +202,7 @@ php artisan serve
 
 ---
 git add .
-git commit -m "v0.12.2"
+git commit -m "v0.12.3"
 git checkout lesson-1
 ---
 git push --all origin   --(push all local branches at once)         <-----
